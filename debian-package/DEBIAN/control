@@ -1,5 +1,5 @@
 Package: weatherworks-deploy
-Version: 1.0.3
+Version: 1.0.4
 Section: web
 Priority: optional
 Architecture: amd64

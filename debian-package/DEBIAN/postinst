@@ -24,7 +24,7 @@ mkdir -p $APP_DIR
 cd $APP_DIR
 
 # Download and extract the repository
-wget -O weatherworks.zip https://github.com/The-Best-Codes/weatherworks/archive/refs/heads/main.zip
+wget -O weatherworks.zip https://github.com/The-Best-Codes/weatherworks-public/archive/refs/heads/main.zip
 unzip weatherworks.zip
 mv test-main/* .
 mv test-main/.* . 2>/dev/null || true
