@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --chart-1: 173 58% 39%;
+    --chart-2: 12 76% 61%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+
+    --chart-1: 220 70% 50%;
+    --chart-5: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-2: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* General styles for scrollbars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+*:not(.no-scrollbar)::-webkit-scrollbar {
+  background: transparent;
+  height: 8px;
+  width: 8px;
+}
+
+/* Styles for scrollbars that are not in elements with the no-scrollbar class */
+*:not(.no-scrollbar)::-webkit-scrollbar,
+*:not(.no-scrollbar)::-webkit-scrollbar-corner {
+  background: transparent;
+  height: 8px;
+  width: 8px;
+}
+
+*:not(.no-scrollbar)::-webkit-scrollbar-thumb {
+  background: content-box currentColor;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  color: #dadce0;
+  min-height: 24px;
+  min-width: 24px;
+}
+
+*:not(.no-scrollbar):hover::-webkit-scrollbar-thumb {
+  color: #80868b;
+}
+
+*:not(.no-scrollbar)::-webkit-scrollbar-thumb:active {
+  color: #5f6368;
+}
+
+*:not(.no-scrollbar)::-webkit-scrollbar-button {
+  height: 0;
+  width: 0;
+}
+
+.typography-image-sm * img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}
+
+::selection {
+  @apply bg-sky-700 text-sky-50;
+}
+
+.rounded-clippath-1 {
+  clip-path: inset(0 round 0.25rem);
+}
+
+.rounded-clippath-2 {
+  clip-path: inset(0 round 0.5rem);
+}
+
+.children-button-text-white > button {
+  @apply text-white;
+}

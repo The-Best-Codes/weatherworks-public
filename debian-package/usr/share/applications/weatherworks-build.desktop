@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Build WeatherWorks
+Comment=Build the WeatherWorks application
+Exec=bash -c 'cd /opt/weatherworks && npm run build'
+Terminal=true
+Categories=Development;

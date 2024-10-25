@@ -1,0 +1,407 @@
+{
+  "config": "Configuration for WeatherWorks installed modules",
+  "modules": [
+    {
+      "meta": {
+        "name": "Page Background Image",
+        "id": "ww.bestcodes.page_background.default",
+        "desc": "Displays the background image"
+      },
+      "path": "default/PageBackground/main.tsx",
+      "position": 0,
+      "components": {
+        "default": {
+          "export": "DefaultPageBackground",
+          "props": {
+            "refreshInterval": 3600000
+          }
+        }
+      },
+      "enabled": false,
+      "lineBreak": false,
+      "location": "bottom"
+    },
+    {
+      "meta": {
+        "name": "Main Toolbar",
+        "id": "ww.bestcodes.main_toolbar.default",
+        "desc": "Displays the main toolbar"
+      },
+      "path": "default/MainToolbar/main.tsx",
+      "position": 0,
+      "components": {
+        "default": {
+          "export": "MainToolbar",
+          "props": {
+            "autoHide": false,
+            "location": "br",
+            "orientation": "vertical",
+            "plugins": [
+              {
+                "name": "Chart Explorer",
+                "id": "ww.bestcodes.chart_explorer.main_toolbar",
+                "desc": "Exlore Tempest history charts",
+                "enabled": true,
+                "position": 2,
+                "paths": [
+                  {
+                    "key": "component",
+                    "val": "ChartExplorer/main.tsx"
+                  },
+                  {
+                    "key": "provider",
+                    "val": "ChartExplorerProvider",
+                    "passMainProps": true
+                  },
+                  {
+                    "key": "main",
+                    "val": "ChartExplorerButton"
+                  },
+                  {
+                    "key": "external",
+                    "val": "ChartExplorerDialog"
+                  }
+                ]
+              },
+              {
+                "name": "Screen Lock",
+                "id": "ww.bestcodes.screenlock.main_toolbar",
+                "desc": "Lock the screen when it is not in use",
+                "enabled": true,
+                "position": 0,
+                "paths": [
+                  {
+                    "key": "component",
+                    "val": "ScreenLock/main.tsx"
+                  },
+                  {
+                    "key": "provider",
+                    "val": "LockProvider",
+                    "props": {}
+                  },
+                  {
+                    "key": "main",
+                    "val": "LockButton"
+                  },
+                  {
+                    "key": "external",
+                    "val": "LockDialog"
+                  }
+                ]
+              },
+              {
+                "name": "Night Mode",
+                "id": "ww.bestcodes.nightmode.main_toolbar",
+                "desc": "Enable night mode",
+                "enabled": true,
+                "position": 1,
+                "paths": [
+                  {
+                    "key": "component",
+                    "val": "NightMode/main.tsx"
+                  },
+                  {
+                    "key": "provider",
+                    "val": "NightModeProvider",
+                    "props": {
+                      "automode": true
+                    }
+                  },
+                  {
+                    "key": "main",
+                    "val": "NightModeButton"
+                  },
+                  {
+                    "key": "external",
+                    "val": "NightModeOverlay"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "enabled": true,
+      "lineBreak": false,
+      "location": "bottom"
+    },
+    {
+      "meta": {
+        "name": "Personal Media Fader",
+        "id": "ww.bestcodes.mediafader.default",
+        "desc": "Displays media from your personal library"
+      },
+      "path": "default/MediaDisplay/main.tsx",
+      "position": 0,
+      "components": {
+        "default": {
+          "export": "DefaultMediaDisplay",
+          "props": {
+            "intervalDuration": 10000,
+            "horizontalAlignment": "center",
+            "className": "rounded-lg"
+          }
+        }
+      },
+      "enabled": true,
+      "lineBreak": false,
+      "location": "top"
+    },
+    {
+      "meta": {
+        "name": "Tempest Outdoor Main Weather Stats",
+        "id": "ww.bestcodes.tempest_outdoor_main.default",
+        "desc": "Displays the main outdoor weather stats from Tempest station"
+      },
+      "path": "default/TempestCurrentStats/main.tsx",
+      "position": 1,
+      "components": {
+        "default": {
+          "export": "DefaultTempestCurrentStats",
+          "props": {}
+        }
+      },
+      "enabled": true,
+      "lineBreak": false,
+      "location": "fitter"
+    },
+    {
+      "meta": {
+        "name": "Tempest Outdoor Forecast",
+        "id": "ww.bestcodes.tempest_outdoor_forecast.default",
+        "desc": "Displays the forecast from Tempest station"
+      },
+      "path": "default/TempestForecast/main.tsx",
+      "position": 2,
+      "components": {
+        "default": {
+          "export": "ForecastWeather",
+          "props": {}
+        }
+      },
+      "enabled": true,
+      "lineBreak": false,
+      "location": "fitter"
+    },
+    {
+      "meta": {
+        "name": "Tempest Wind Stats",
+        "id": "ww.bestcodes.tempest_wind.default",
+        "desc": "Displays the wind stats from Tempest station"
+      },
+      "path": "default/TempestWindStats/main.tsx",
+      "position": 3,
+      "components": {
+        "default": {
+          "export": "DefaultTempestWindStats",
+          "props": {}
+        }
+      },
+      "enabled": true,
+      "lineBreak": false,
+      "location": "fitter"
+    },
+    {
+      "meta": {
+        "name": "National Weather Service Alerts",
+        "id": "ww.bestcodes.alerts.default",
+        "desc": "Displays the National Weather Service Alerts"
+      },
+      "path": "default/WeatherAlerts/main.tsx",
+      "position": 4,
+      "components": {
+        "default": {
+          "export": "DefaultWeatherAlerts",
+          "props": {
+            "collapsedAlerts": false
+          }
+        }
+      },
+      "enabled": true,
+      "lineBreak": false,
+      "location": "fitter"
+    },
+    {
+      "meta": {
+        "name": "Indoor Weather Sensor",
+        "id": "ww.bestcodes.indoor_weather.reccomended",
+        "desc": "Displays the indoor weather sensor data"
+      },
+      "path": "installed/IndoorSensor/main.tsx",
+      "position": 5,
+      "components": {
+        "default": {
+          "export": "DefaultIndoorSensorModule",
+          "props": {}
+        }
+      },
+      "enabled": true,
+      "lineBreak": false,
+      "location": "fitter"
+    },
+    {
+      "meta": {
+        "name": "Time and Date",
+        "id": "ww.bestcodes.timeanddate.default",
+        "desc": "Displays the time and date"
+      },
+      "path": "default/TimeDate/main.tsx",
+      "position": 6,
+      "components": {
+        "default": {
+          "export": "DefaultTimeDate",
+          "props": {}
+        }
+      },
+      "enabled": true,
+      "lineBreak": false,
+      "location": "fitter"
+    },
+    {
+      "meta": {
+        "name": "Current Sun Data Graphic",
+        "id": "ww.bestcodes.sun_graphic.default",
+        "desc": "Displays the current sun data graphic and stats"
+      },
+      "path": "default/SunSkyGraphic/main.tsx",
+      "position": 7,
+      "components": {
+        "default": {
+          "export": "DefaultSunSkyGraphic",
+          "props": {}
+        }
+      },
+      "enabled": true,
+      "lineBreak": false,
+      "location": "fitter"
+    },
+    {
+      "meta": {
+        "name": "Tempest Lightning Stats",
+        "id": "ww.bestcodes.tempest_lightning.default",
+        "desc": "Displays the lightning stats from Tempest station"
+      },
+      "path": "default/TempestLightningStats/main.tsx",
+      "position": 8,
+      "components": {
+        "default": {
+          "export": "DefaultLightningModule",
+          "props": {}
+        }
+      },
+      "enabled": true,
+      "lineBreak": false,
+      "location": "fitter"
+    },
+    {
+      "meta": {
+        "name": "Rainviewer Weather Radar",
+        "id": "ww.bestcodes.rainviewer_weather_radar.default",
+        "desc": "Displays the weather radar. Powered by Rainviewer"
+      },
+      "path": "default/WeatherRadar/main.tsx",
+      "position": 9,
+      "components": {
+        "default": {
+          "export": "DefaultWeatherRadar",
+          "props": {}
+        }
+      },
+      "enabled": true,
+      "lineBreak": false,
+      "location": "fitter"
+    },
+    {
+      "meta": {
+        "name": "Tempest Rain Stats",
+        "id": "ww.bestcodes.tempest_rain.default",
+        "desc": "Displays the rain stats from Tempest station"
+      },
+      "path": "default/TempestRainStats/main.tsx",
+      "position": 10,
+      "components": {
+        "default": {
+          "export": "DefaultRainStats",
+          "props": {}
+        }
+      },
+      "enabled": true,
+      "lineBreak": false,
+      "location": "fitter"
+    },
+    {
+      "meta": {
+        "name": "USAirQuality",
+        "id": "ww.bestcodes.us_air_quality.default",
+        "desc": "Displays the US Air Quality data"
+      },
+      "path": "default/USAirQuality/main.tsx",
+      "position": 11,
+      "components": {
+        "default": {
+          "export": "DefaultUSAirQuality",
+          "props": {}
+        }
+      },
+      "enabled": true,
+      "lineBreak": false,
+      "location": "fitter"
+    },
+    {
+      "meta": {
+        "name": "Custom News Feed",
+        "id": "ww.bestcodes.custom_news.default",
+        "desc": "Displays custom news feed"
+      },
+      "path": "default/CustomNews/main.tsx",
+      "position": 12,
+      "components": {
+        "default": {
+          "export": "NewsContainer",
+          "props": {
+            "refreshInterval": 3600000
+          }
+        }
+      },
+      "enabled": true,
+      "lineBreak": false,
+      "location": "fitter"
+    },
+    {
+      "meta": {
+        "name": "Moon Statistics",
+        "id": "ww.bestcodes.moon_data.default",
+        "desc": "Displays moon data"
+      },
+      "path": "default/MoonStats/main.tsx",
+      "position": 13,
+      "components": {
+        "default": {
+          "export": "MoonStats",
+          "props": {}
+        }
+      },
+      "enabled": true,
+      "lineBreak": false,
+      "location": "fitter"
+    },
+    {
+      "meta": {
+        "name": "Tempest UV / Sun Statistics",
+        "id": "ww.bestcodes.tempest_sun.default",
+        "desc": "Displays the uv and sun stats from Tempest station"
+      },
+      "path": "default/TempestUVStats/main.tsx",
+      "position": 14,
+      "components": {
+        "default": {
+          "export": "SunStats",
+          "props": {}
+        }
+      },
+      "enabled": true,
+      "lineBreak": false,
+      "location": "fitter"
+    }
+  ]
+}

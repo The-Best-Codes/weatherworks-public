@@ -1,0 +1,15 @@
+{
+  "config": "Configuration for WeatherWorks api data",
+  "authData": {
+    "tempestApiKey": "a8f5dbda-af0a-4b57-99b9-f10baa88f27b",
+    "pixabayApiKey": "XXXX"
+  },
+  "endpointData": {
+    "tempestStationId": "130080",
+    "baseUrl": "swd.weatherflow.com"
+  },
+  "metaData": {
+    "latitude": "32.7555",
+    "longitude": "-97.3308"
+  }
+}

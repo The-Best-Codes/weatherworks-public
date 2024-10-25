@@ -1,0 +1,11 @@
+{
+  "theme": "defaultLight",
+  "units": {
+    "temperature": "F",
+    "speed": "mph",
+    "pressure": "inHg",
+    "length": "in",
+    "distance": "mi"
+  },
+  "refreshInterval": 60000
+}
