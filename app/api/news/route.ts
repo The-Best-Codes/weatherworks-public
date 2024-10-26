@@ -6,7 +6,8 @@ import { decode } from "html-entities";
 function decodeAndStripHtml(text: string): string {
   if (!text) return "";
   const decoded = decode(text);
-  return decoded.replace(/<[^>]*>?/gm, ""); // Strip HTML tags
+  // Improved regex to handle multiple consecutive HTML tags and potential malicious content
+  return decoded.replace(/<\/?[^>]+(>|$)/g, ""); // Strip HTML tags more effectively
 }
 
 interface UrlItem {
