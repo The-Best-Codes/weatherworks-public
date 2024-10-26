@@ -1,8 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=WeatherWorks
-Comment=Start and open WeatherWorks application
-Exec=bash -c 'pm2 start npm --name "weatherworks" -- start && xdg-open http://localhost:3000'
-Terminal=false
-Categories=Network;
-Icon=/opt/weatherworks/app/favicon.ico
